@@ -29,11 +29,11 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 🚀 Run renew script
+      - name: 🚀 Run login script
         env:
           ACCOUNTS_BATCH: ${{ secrets.ACCOUNTS_BATCH }}
         run: |
-          python renew.py
+          python login.py
 
       # 📸 上传截图（无论成功或失败）
       - name: 📸 Upload debug screenshots
